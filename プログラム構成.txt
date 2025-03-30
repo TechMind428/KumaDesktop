@@ -1,31 +1,27 @@
-main.pyで起動
-
-
-SmartCamera
-├──kumaMac/
-│	├── settings.py                 # 設定ファイル（既存）
-│	├── main.py                     # メインエントリーポイント
-│	├── api/
-│	│   ├── __init__.py
-│	│   ├── aitrios_client.py       # AITRIOS API通信用クライアント
-│	│   └── line_notify.py          # LINE Notify用クライアント
-│	├── core/
-│	│   ├── __init__.py
-│	│   ├── detection_processor.py  # 画像処理と物体検出ロジック
-│	│   └── settings_manager.py     # 設定管理クラス
-│	├── ui/
-│	│   ├── __init__.py
-│	│   ├── main_window.py          # メインウィンドウクラス
-│	│   ├── main_tab.py             # メインタブの実装
-│	│   └── settings_tab.py         # 設定タブの実装
-│	└── utils/
-│	    ├── __init__.py
-│	    ├── image_utils.py          # 画像処理ユーティリティ
-│	    └── file_utils.py           # ファイル操作ユーティリティ
-├── BoundingBox.py                # Bounding Boxの定義(Flatbuffers)
-├── BoundingBox2d.py              # Bounding Boxの定義2 Flatbuffers
-├── ObjectDetectionData.py        # Flatbuffers
-├── ObjectDetectionTop.py         # Flatbuffers
-├── GeneralObject.py              # Flatbuffers
-
-
+KumaDesktop/                           # プロジェクトのルートディレクトリ
+├── main.py                            # アプリケーション起動エントリーポイント（ディレクトリ直下）
+├── __init__.py                        # Pythonパッケージとして定義
+├── kumaMac/                           # アプリケーションのメインディレクトリ
+│   ├── settings.py                    # アプリケーション設定ファイル（デバイスID, API設定など）
+│   ├── api/                           # API通信関連モジュール
+│   │   ├── __init__.py                # APIモジュールパッケージ定義
+│   │   ├── aitrios_client.py          # AITRIOS API通信用クライアント
+│   │   └── line_notify.py             # LINE Notify用クライアント（通知機能）
+│   ├── core/                          # コアロジック関連モジュール
+│   │   ├── __init__.py                # コアモジュールパッケージ定義
+│   │   ├── detection_processor.py     # 画像処理と物体検出ロジック
+│   │   └── settings_manager.py        # 設定管理クラス（設定の読み書き）
+│   ├── ui/                            # ユーザーインターフェース関連モジュール
+│   │   ├── __init__.py                # UIモジュールパッケージ定義
+│   │   ├── main_window.py             # メインウィンドウクラス（アプリのメインUI）
+│   │   ├── main_tab.py                # メインタブの実装（監視画面）
+│   │   └── settings_tab.py            # 設定タブの実装（設定画面）
+│   └── utils/                         # ユーティリティ関連モジュール
+│       ├── __init__.py                # ユーティリティモジュールパッケージ定義
+│       ├── image_utils.py             # 画像処理ユーティリティ（描画、変換など）
+│       └── file_utils.py              # ファイル操作ユーティリティ（CSV読み書きなど）
+├── BoundingBox.py                     # FlatBuffersで生成されたバウンディングボックス定義
+├── BoundingBox2d.py                   # FlatBuffersで生成された2Dバウンディングボックス実装
+├── ObjectDetectionData.py             # FlatBuffersで生成された物体検出データ構造定義
+├── ObjectDetectionTop.py              # FlatBuffersで生成された物体検出トップレベル構造
+└── GeneralObject.py                   # FlatBuffersで生成された一般物体定義
