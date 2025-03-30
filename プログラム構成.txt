@@ -22,10 +22,10 @@ SmartCamera
 │	    ├── __init__.py
 │	    ├── image_utils.py          # 画像処理ユーティリティ
 │	    └── file_utils.py           # ファイル操作ユーティリティ
-├── BoundingBox.py
-├── BoundingBox2d.py
-├── ObjectDetectionData.py
-├── ObjectDetectionTop.py
-├── GeneralObject.py
+├── BoundingBox.py                # Flatbuffers
+├── BoundingBox2d.py              # Flatbuffers
+├── ObjectDetectionData.py        # Flatbuffers
+├── ObjectDetectionTop.py         # Flatbuffers
+├── GeneralObject.py              # Flatbuffers
 
 
